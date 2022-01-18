@@ -5,16 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assest/ex1.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
     <title>To Do List</title>
 </head>
 <body>
-    <header class="flex-row">
+    <header class="contineir">
         <h1>TODO</h1>
-        <div class="theme-block">
-          <input type="checkbox" name="theme" id="theme">
-          <label for="theme"></label>
+        <div class="theme-change">
+          <input type="checkbox" name="theme" id="inputTheme">
+          <label for="inputTheme"></label>
         </div>
     </header>
+
+    <main>
+        <div class="add-item contineir">
+          <span></span>
+          <input type="text" placeholder="Create a new todo..." name="addItem" id="addItem">
+        </div>
+    </main>    
 
     <script src="./ex1.js"></script>
 </body>
