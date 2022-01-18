@@ -1,12 +1,42 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+.theme-dark {
+    --bg-top-image: 0 0 url(./img/bg-desktop-dark.jpg) no-repeat;
+    --main-bg: hsl(235, 21%, 11%);
+    --todo-bg: hsl(235, 24%, 19%);
+    --todo-shadow: hsl(235, 21%, 11%);
+    --font-color: hsl(234, 39%, 85%);
+    --font-color-hover: #fff;
+}
+
+.theme-light {
+    --bg-top-image: 0 0 url(./img/bg-desktop-light.jpg) no-repeat;
+    --main-bg: hsl(0, 0%, 98%);
+    --todo-bg: hsl(0, 0%, 98%);
+    --todo-shadow: hsl(235, 19%, 35%);
+    --font-color: hsl(236, 9%, 61%);
+    --font-color-hover: hsl(235, 21%, 11%);
 }
 
 body {
     font-family: 'Josefin Sans', sans-serif;
+    padding: 0;
+    margin: 0;
     font-size: 18px;
-    height: 100%;
-    width: 100%;
+    background: var(--bg-top-image);
+    background-color: var(--main-bg);
+    background-size: cover;
+    color: var(--font-color);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+.contineir {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
 }
