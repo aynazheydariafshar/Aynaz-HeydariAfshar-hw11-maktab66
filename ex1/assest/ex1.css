@@ -57,3 +57,24 @@ h1 {
     color: #fff;
     letter-spacing: 1rem;
 }
+
+.theme-change{
+    margin: -10px 0 0;
+}
+
+.theme-change #inputTheme{
+    display: none;
+}
+
+.theme-change #inputTheme + label::before {
+    content: '';
+    background: url(./img/icon-sun.svg);
+    display: block;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.theme-change #inputTheme:checked + label::before {
+    background: url(./img/icon-moon.svg);
+}
