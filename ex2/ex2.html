@@ -25,15 +25,28 @@
                 <div class="modal-body">
                     in this example , we use <span class="text-danger">-was-validated</span> to indicate what's missing before submitting the form :  
                 </div>
-
-                <div>
-                    
-                </div>
-           
+                <form role="form" method="POST" action="">
+                    <div class="form-group px-3 py-2">
+                        <label class="control-label">Username : </label>
+                        <div>
+                            <input type="text" class="form-control" name="user" placeholder="Enter Username">
+                        </div>
+                    </div>
+                    <div class="form-group px-3 py-2">
+                        <label class="control-label">Password : </label>
+                        <div>
+                            <input type="password" class="form-control" name="user" placeholder="Enter Password">
+                        </div>
+                    </div>
+                    <div class="form-check ms-3 py-2">
+                        <input class="form-check-input" type="checkbox" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            I agree on blabla
+                        </label>
+                    </div>
+                </form>    
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">Yes</button>
-                  <button type="button" class="btn btn-primary">No</button>
-                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Exit</button>       
+                  <button type="submit" class="btn btn-primary">submit</button>       
                 </div>
               </div>
             </div>
