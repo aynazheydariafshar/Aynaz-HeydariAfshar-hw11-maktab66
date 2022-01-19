@@ -132,3 +132,27 @@ ul li label {
     padding: 2px 0 0 48px;
     font-size: 1.1rem;
 }
+
+.check-mark{
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+}
+
+ul li.hidden {
+    display: none;
+}
+
+ul li input[type="checkbox"] ~ .check-mark {
+    border: 1px solid var(--font-color);
+    border-radius: 50px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--font-color);
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    top: 1px;
+}
