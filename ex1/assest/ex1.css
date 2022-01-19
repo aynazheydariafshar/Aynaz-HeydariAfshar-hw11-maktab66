@@ -5,6 +5,7 @@
     --todo-shadow: hsl(235, 21%, 11%);
     --font-color: hsl(234, 39%, 85%);
     --font-color-hover: #fff;
+    --bg-hover : #4e254e;
 }
 
 .theme-light {
@@ -14,6 +15,7 @@
     --todo-shadow: hsl(235, 19%, 35%);
     --font-color: hsl(236, 9%, 61%);
     --font-color-hover: hsl(235, 21%, 11%);
+    --bg-hover : #8b5e8b;
 }
 
 body {
@@ -155,4 +157,29 @@ ul li input[type="checkbox"] ~ .check-mark {
     position: absolute;
     cursor: pointer;
     top: 1px;
+}
+
+ul li input[type="checkbox"]:checked ~ .text {
+    text-decoration: line-through;
+}
+
+.trash {
+    background: url(./img/icon-cross.svg) no-repeat;
+    width: 18px;
+    height: 18px;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+}
+
+ul li:hover{
+    background-color: var(--bg-hover);
+    cursor: pointer;
+}
+
+.check-clear{
+    justify-content: space-between;
+    padding:20px;
 }
