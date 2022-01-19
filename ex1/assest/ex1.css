@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+
 .theme-dark {
     --bg-top-image: 0 0 url(./img/bg-desktop-dark.jpg) no-repeat;
     --main-bg: hsl(235, 21%, 11%);
@@ -182,4 +184,26 @@ ul li:hover{
 .check-clear{
     justify-content: space-between;
     padding:20px;
+}
+
+.span-btn{
+    padding: 20px 20px 20px 27px;
+    margin-top:10px ;
+    font-size: .8rem;
+    align-items: center;
+    border-radius: 5px;
+    background: var(--todo-bg);
+    justify-content: center;
+}
+
+.filter input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.filter span{
+    margin-right: 30px;
 }
