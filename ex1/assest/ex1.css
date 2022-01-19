@@ -196,6 +196,11 @@ ul li:hover{
     justify-content: center;
 }
 
+.clear:hover {
+    cursor: pointer;
+    color: var(--font-color-hover);
+}
+
 .filter input[type="radio"] {
     position: absolute;
     opacity: 0;
@@ -207,3 +212,13 @@ ul li:hover{
 .filter span{
     margin-right: 30px;
 }
+
+.filter label:hover {
+    color: var(--font-color-hover);
+    cursor: pointer;
+}
+
+.filter input[type="radio"]:checked ~ span {
+    color: hsl(221, 62%, 52%);
+}
+
