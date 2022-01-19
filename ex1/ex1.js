@@ -51,3 +51,10 @@ todoList.addEventListener('click',(event) => {
         removeItem(event.target.parentElement);
     }
 });
+
+//clear
+document.querySelector('.clear').addEventListener('click', () => {
+    document.querySelectorAll('.list-item input[type="checkbox"]:checked').forEach(item => {
+        removeItem(item.closest('li'));
+    });
+});
