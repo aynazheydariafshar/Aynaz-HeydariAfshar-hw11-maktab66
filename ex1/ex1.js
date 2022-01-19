@@ -39,3 +39,15 @@ function newItemFunc(input) {
 function updateItemes(number) {
     spanOne.innerText = +spanOne.innerText + number;
 }
+
+//remove item
+function removeItem(input) {
+    input.remove();
+    updateItemes(-1);
+}
+
+todoList.addEventListener('click',(event) => {
+    if (event.target.classList.contains('trash')) {
+        removeItem(event.target.parentElement);
+    }
+});
