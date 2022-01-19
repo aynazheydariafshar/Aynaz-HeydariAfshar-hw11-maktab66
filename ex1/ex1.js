@@ -23,7 +23,7 @@ function newItemFunc(input) {
     newLI.innerHTML = `
         <label class="list-item">
         <input type="checkbox" name="todoItem">
-        <span class="checkmark"></span>
+        <span class="check-mark"></span>
         <span class="input">${input}</span>
     </label>
     <span class="remove"></span>
@@ -58,3 +58,32 @@ document.querySelector('.clear').addEventListener('click', () => {
         removeItem(item.closest('li'));
     });
 });
+
+//all active completed
+document.querySelectorAll('.filter input').forEach(item => {
+    item.addEventListener('change', (e) => {
+        filterItems(e.target.id);
+    });
+});
+
+function filterItems(id) {
+    const all = todoList.querySelectorAll('li');
+
+    switch(id) {
+        case 'all':
+            all.forEach(item => {
+                item.classList.remove('hidden');
+            })
+            break;
+        case 'active':
+            all.forEach(item => {
+                item.querySelector('input').checked ? item.classList.add('hidden') : item.classList.remove('hidden');;
+            })
+            break;
+        default: 
+            all.forEach(item => {
+                !item.querySelector('input').checked ? item.classList.add('hidden') : item.classList.remove('hidden');;
+            })
+            break;
+    }
+}

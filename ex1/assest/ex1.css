@@ -109,6 +109,14 @@ h1 {
 
 }
 
+.check-mark:hover {
+    background: center url(./img/icon-check.svg) no-repeat, linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+ul li input[type="checkbox"]:checked ~ .check-mark {
+    background: center url(./img/icon-check.svg) no-repeat, linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
 ul {
     list-style-type: none;
     padding: 0;
