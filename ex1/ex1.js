@@ -26,7 +26,7 @@ function newItemFunc(input) {
         <span class="check-mark"></span>
         <span class="input">${input}</span>
     </label>
-    <span class="remove"></span>
+    <span class="trash"></span>
     `;
     
     if (document.querySelector('.filter input[type="radio"]:checked').id === 'completed') {
