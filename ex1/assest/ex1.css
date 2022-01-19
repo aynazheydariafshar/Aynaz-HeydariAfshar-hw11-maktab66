@@ -4,7 +4,6 @@
     --bg-top-image: 0 0 url(./img/bg-desktop-dark.jpg) no-repeat;
     --main-bg: hsl(235, 21%, 11%);
     --todo-bg: hsl(235, 24%, 19%);
-    --todo-shadow: hsl(235, 21%, 11%);
     --font-color: hsl(234, 39%, 85%);
     --font-color-hover: #fff;
     --bg-hover : #4e254e;
@@ -14,7 +13,6 @@
     --bg-top-image: 0 0 url(./img/bg-desktop-light.jpg) no-repeat;
     --main-bg: hsl(0, 0%, 98%);
     --todo-bg: hsl(0, 0%, 98%);
-    --todo-shadow: hsl(235, 19%, 35%);
     --font-color: hsl(236, 9%, 61%);
     --font-color-hover: hsl(235, 21%, 11%);
     --bg-hover : #8b5e8b;
@@ -90,6 +88,7 @@ h1 {
     margin: 0 0 24px;
     padding: 0 26px;
     position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .add-item-input #addItem {
@@ -106,7 +105,8 @@ h1 {
 .content {
     background: var(--todo-bg);
     border-radius: 5px;
-    box-shadow: 0 42px 30px -9px var(--todo-shadow);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 ul {
@@ -194,7 +194,9 @@ ul li:hover{
     border-radius: 5px;
     background: var(--todo-bg);
     justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 
 .clear:hover {
     cursor: pointer;
