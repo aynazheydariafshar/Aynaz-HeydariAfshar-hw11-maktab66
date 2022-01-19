@@ -3,10 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assest/ex2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Hello, world!</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="container">
@@ -25,24 +24,24 @@
                 <div class="modal-body">
                     in this example , we use <span class="text-danger">-was-validated</span> to indicate what's missing before submitting the form :  
                 </div>
-                <form role="form" method="POST" action="">
+                <form class="was-validated" role="form" novalidate>
                     <div class="form-group px-3 py-2">
-                        <label class="control-label">Username : </label>
-                        <div>
-                            <input type="text" class="form-control" name="user" placeholder="Enter Username">
-                        </div>
+                        <label for="uname" class="form-label">Username:</label>
+                        <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
                     </div>
                     <div class="form-group px-3 py-2">
-                        <label class="control-label">Password : </label>
-                        <div>
-                            <input type="password" class="form-control" name="user" placeholder="Enter Password">
-                        </div>
+                        <label for="pwd" class="form-label">Password:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
                     </div>
                     <div class="form-check ms-3 py-2">
-                        <input class="form-check-input" type="checkbox" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                            I agree on blabla
-                        </label>
+                        <input class="form-check-input" type="checkbox" id="myCheck"  name="remember" required>
+                        <label class="form-check-label" for="myCheck">I agree on blabla.</label>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Check this checkbox to continue.</div>
                     </div>
                 </form>    
                 <div class="modal-footer">
